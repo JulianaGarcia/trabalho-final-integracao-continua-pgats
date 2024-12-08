@@ -1,0 +1,16 @@
+{
+  "name": "trabalho-automacao-web-pgats",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Mio, Juliana",
+  "license": "ISC",
+  "description": "Trabalho de conclusão da disciplina automação de testes web com Cypress",
+  "devDependencies": {
+    "cypress": "^13.16.1",
+    "cypress-mochawesome-reporter": "^3.8.2"
+  }
+}
