@@ -1,0 +1,32 @@
+name: 'Execução Manual'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  
+  e2e-tests:
+    runs-on: ['ubuntu-latest']
+    
+    steps:
+      - uses: actions/checkout@v4
+
+      #- uses: actions/setup-node@v4
+      #  with:
+      #    node-version: lts/*
+
+      - name: Instalando npm
+        run: npm init -y
+
+      - name: Instalando cypress
+        run: npm install -D cypress
+
+      - name: Testes E2E (end-to-end) 
+        run: npx cypress run
+
+      # passed, failed, cancelled
+      #- uses: actions/upload-artifact@v4
+      #  if: ${{ !cancelled() }}
+      #  with:
+      #    name: relatorio-de-testes
+      #    path: ./playwright-report
